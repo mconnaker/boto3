@@ -2,19 +2,14 @@
 import boto3
 from datetime import datetime 
 
-aws_region = [""]
+aws_region = ["us-east-1"]
 for region in aws_region:
     ec2 = boto3.resource('ec2', region_name=region)
     volume = ec2.volumes.all()
-    print("Starting in ", region)
-    print('*******************************')
     for v in volume:
         for a in v.attachments:
             print("Instance Id      ", a['InstanceId'])
-            instances = ec2.instances.filter(
-                InstanceIds=[a['InstanceId'],
-                ],
-            )  
+            instances = ec2.instances.filter( InstanceIds=[a['InstanceId'],],)  
             try:
                 for instance in instances:
                     for device in instance.block_device_mappings:
@@ -33,8 +28,3 @@ for region in aws_region:
                             else: next(iter)
             except TypeError as te:
                 print()
-        print()
-    print('*******************************')
-    print("Finished with Region")
-    print()
-print("End of List")
