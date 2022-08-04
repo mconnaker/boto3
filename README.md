@@ -21,3 +21,18 @@ Data retrieved:
 - Attached To
     - Instance ID
     - Instance Name
+
+<br>
+<br>
+
+### List Ec2 Instance
+This script is designed to retrieve a list of ec2 instances in a region of your aws account. You can configure region to look for multiple regions.
+
+Data retrieved:
+- Instance ID
+- Instance Name
+- Instance State
+- Key_name
+- Launch Time
+- Public IP Address
+- Private IP Address
