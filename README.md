@@ -9,7 +9,7 @@ In AWS there isn't a way to retrieve when an ec2 instance was first created. AWS
 However, there is a work around. Root Device EBS Volumes generally are not replaced after ec2 instance creation. Therefore, one can approximate when the ec2 instance was likely spun up by retrieving the creation date of the root device EBS Volume.
 <br>
 <br>
-This script is designed to retrieve the creation date of the root device EBS Volume and identify whom it is attached to.
+This script is designed to retrieve the creation date of the root device EBS Volume and identify whom it is attached to. You can configure region to look for multiple regions.
 <br>
 <br>
 Data retrieved:
