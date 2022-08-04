@@ -2,7 +2,7 @@
 import boto3
 from datetime import datetime 
 
-aws_region = ["eu-west-1","us-east-1","ap-southeast-1","us-west-1"]
+aws_region = [""]
 for region in aws_region:
     ec2 = boto3.resource('ec2', region_name=region)
     volume = ec2.volumes.all()
