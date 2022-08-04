@@ -4,7 +4,9 @@ Boto3 is a Python package that provides interfaces to Amazon Web Services. This 
 ## Scripts
 
 ### EC2 Creation
-In AWS there is no way to pull or retrieve the when an ec2 instance was first created. AWS does not store this information in metadata. The launch-time only gives approximation of when the ec2 instance was last stop/start or rebooted. However, there is a work around. Root Device EBS Volumes are generally never replaced after ec2 instance is created. Therefore, one can approximate when the ec2 instance was most likely spun up by retrieving the creation date of the EBS Volume
+In AWS there isn't a way to retrieve when an ec2 instance was first created. AWS does not store this in metadata. The launch-time only gives approximation of when an ec2 instance was last stop/start or rebooted. 
+<br><br>
+However, there is a work around. Root Device EBS Volumes generally are not replaced after ec2 instance creation. Therefore, one can approximate when the ec2 instance was likely spun up by retrieving the creation date of the root device EBS Volume.
 <br>
 <br>
 This script is designed to retrieve the creation date of the root device EBS Volume and identify whom it is attached to.
