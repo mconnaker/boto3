@@ -25,8 +25,10 @@ Data retrieved:
 <br>
 <br>
 
-### List Ec2 Instance
+### List EC2 Instance
 This script is designed to retrieve a list of ec2 instances in a region of your aws account. You can configure region to look for multiple regions.
+
+<br>
 
 Data retrieved:
 - Instance ID
@@ -36,3 +38,12 @@ Data retrieved:
 - Launch Time
 - Public IP Address
 - Private IP Address
+
+<br>
+<br>
+
+### Create Tags for EC2's
+This script creates tags for ec2's from a csv file.
+
+requirements:
+Must create a file called ec2_tags.csv. See example in example_files.
